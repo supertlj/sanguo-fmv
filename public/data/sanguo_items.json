@@ -1,0 +1,30 @@
+[
+  {
+    "id": "zhuge_crossbow",
+    "name": "诸葛连弩",
+    "description": "诸葛孔明客居荆州时所创，可连发十矢，威力惊人，乃蜀汉军工之巅峰。",
+    "icon": "🏹",
+    "category": "weapon"
+  },
+  {
+    "id": "yun_shi_one",
+    "name": "运石一",
+    "description": "表面斑驳的奇石，似乎记录了某段被遗忘的战火岁月，触之隐约有哀鸣声。",
+    "icon": "🪨",
+    "category": "relic"
+  },
+  {
+    "id": "wang_yun_hufu",
+    "name": "王允的虎符",
+    "description": "司徒王允秘藏之物，可调动长安禁军，是铲除董卓计划中的关键信物。",
+    "icon": "🐅",
+    "category": "token"
+  },
+  {
+    "id": "hong_wei_token",
+    "name": "弘威将军令",
+    "description": "象征大汉将军威严的令牌，持此令者可通行各处关隘。",
+    "icon": "📜",
+    "category": "token"
+  }
+]

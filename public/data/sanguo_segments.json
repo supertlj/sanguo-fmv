@@ -1,0 +1,328 @@
+[
+  {
+    "scene_id": 1,
+    "video_file": "scene_01.mp4",
+    "start_time": "00:00.0",
+    "end_time": "00:18.5",
+    "simple_description": "开场对话",
+    "detailed_description": "子涵在床上玩手机，白晓过来询问。两人讨论《代号三国：龙起》游戏，白晓帮子涵抽卡。"
+  },
+  {
+    "scene_id": 2,
+    "video_file": "scene_02.mp4",
+    "start_time": "00:18.5",
+    "end_time": "00:45.3",
+    "simple_description": "穿越前奏",
+    "detailed_description": "白晓抽中同名角色“刘小山”金卡。屏幕发出白光，展现三国全景图及开场诗词。"
+  },
+  {
+    "scene_id": 3,
+    "video_file": "scene_03.mp4",
+    "start_time": "00:45.3",
+    "end_time": "01:08.5",
+    "simple_description": "桃园结义交互",
+    "detailed_description": "主角穿越到桃园，刘关张三人正在结拜。刘备递给白晓一把短刀要求加入结拜。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [{"text": "割手指结拜", "leads_to": 4}],
+    "selected_option": "割手指结拜"
+  },
+  {
+    "scene_id": 4,
+    "video_file": "scene_04.mp4",
+    "start_time": "01:08.5",
+    "end_time": "01:50.0",
+    "simple_description": "结拜剧情",
+    "detailed_description": "主角完成割指礼，四人共同宣誓结为兄弟。随后镜头转到桌面上的随身物品。"
+  },
+  {
+    "scene_id": 5,
+    "video_file": "scene_05.mp4",
+    "start_time": "01:50.0",
+    "end_time": "01:55.0",
+    "simple_description": "物品选择交互主场",
+    "detailed_description": "桌上有四件物品供选择，分别触发不同回忆，结束后回到原场。",
+    "is_interactive": true,
+    "interaction_type": "item_selection",
+    "options": [
+      {"item": "诸葛连弩", "leads_to": 6},
+      {"item": "运石一", "leads_to": 7},
+      {"item": "王允的虎符", "leads_to": 8},
+      {"item": "弘威将军令", "leads_to": 9}
+    ]
+  },
+  {
+    "scene_id": 6,
+    "video_file": "scene_06.mp4",
+    "start_time": "01:55.0",
+    "end_time": "02:19.0",
+    "simple_description": "回忆：诸葛连弩",
+    "detailed_description": "展示武器诸葛连弩，主角向关羽张飞提及诸葛亮，但此时刘备尚未三顾茅庐，众人并不认识。结束后回到场景5。",
+    "return_to_id": 5
+  },
+  {
+    "scene_id": 7,
+    "video_file": "scene_07.mp4",
+    "start_time": "02:22.0",
+    "end_time": "02:45.0",
+    "simple_description": "回忆：运石一",
+    "detailed_description": "触摸运石一，白晓脑海中浮现出战火纷飞的场景以及一位白衣女子告别的残影。结束后回到场景5。",
+    "return_to_id": 5
+  },
+  {
+    "scene_id": 8,
+    "video_file": "scene_08.mp4",
+    "start_time": "02:46.5",
+    "end_time": "02:56.0",
+    "simple_description": "回忆：王允的虎符",
+    "detailed_description": "查看王允的虎符，感慨原主身份不仅是小将。结束后回到场景5。",
+    "return_to_id": 5
+  },
+  {
+    "scene_id": 9,
+    "video_file": "scene_09.mp4",
+    "start_time": "02:56.0",
+    "end_time": "03:19.5",
+    "simple_description": "回忆：弘威将军令",
+    "detailed_description": "查看弘威将军令，张飞和关羽讨论主角被朝廷封为弘威将军，并提及共谋董贼后的封赏与貂蝉。结束后回到场景5。",
+    "return_to_id": 5
+  },
+  {
+    "scene_id": 10,
+    "video_file": "scene_10.mp4",
+    "start_time": "03:19.5",
+    "end_time": "03:49.0",
+    "simple_description": "互动结束",
+    "detailed_description": "白晓收起物品，此时场景切换，准备出发前往曹营。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [{"text": "继续", "leads_to": 11}],
+    "selected_option": "继续"
+  },
+  {
+    "scene_id": 11,
+    "video_file": "scene_11.mp4",
+    "start_time": "03:49.0",
+    "end_time": "04:29.0",
+    "simple_description": "临别赠礼",
+    "detailed_description": "白晓决定出发。刘备赠送亲手编织的草鞋作为礼物。三兄弟依依惜别。"
+  },
+  {
+    "scene_id": 12,
+    "video_file": "scene_12.mp4",
+    "start_time": "04:29.0",
+    "end_time": "04:39.0",
+    "simple_description": "地图移动",
+    "detailed_description": "游戏地图展示，角色标志从刘备领地移动至曹操军营。"
+  },
+  {
+    "scene_id": 13,
+    "video_file": "scene_13.mp4",
+    "start_time": "04:39.0",
+    "end_time": "04:58.0",
+    "simple_description": "抵达曹营",
+    "detailed_description": "白晓来到曹营门口，荀彧出现阻拦并询问身份。"
+  },
+  {
+    "scene_id": 14,
+    "video_file": "scene_14.mp4",
+    "start_time": "04:58.0",
+    "end_time": "05:16.0",
+    "simple_description": "荀彧身份校验",
+    "detailed_description": "白晓需要出示令牌以进入营地。",
+    "is_interactive": true,
+    "interaction_type": "item_use",
+    "options": [
+      {"text": "弘威将军令", "leads_to": 15},
+      {"text": "诸葛连弩", "leads_to": 13},
+      {"text": "运石一", "leads_to": 13}
+    ],
+    "selected_option": "弘威将军令"
+  },
+  {
+    "scene_id": 15,
+    "video_file": "scene_15.mp4",
+    "start_time": "05:16.0",
+    "end_time": "05:24.0",
+    "simple_description": "进入内营",
+    "detailed_description": "荀彧放行并带路，随后去通报，留白晓一人。白晓注意到一顶神秘帐篷。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [{"text": "点击帐篷查看", "leads_to": 16}],
+    "selected_option": "点击帐篷查看"
+  },
+  {
+    "scene_id": 16,
+    "video_file": "scene_16.mp4",
+    "start_time": "05:24.0",
+    "end_time": "05:40.0",
+    "simple_description": "偷窥士兵交互",
+    "detailed_description": "三名士兵正在帐外偷看，声称里面有仙女洗澡。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [
+      {"text": "加入他们", "leads_to": 17},
+      {"text": "劝退他们", "leads_to": 17}
+    ],
+    "selected_option": "加入他们"
+  },
+  {
+    "scene_id": 17,
+    "video_file": "scene_17.mp4",
+    "start_time": "05:40.0",
+    "end_time": "06:16.0",
+    "simple_description": "甄姬沐浴",
+    "detailed_description": "白晓戳破窗纸看到甄姬沐浴。随后荀彧赶到，呵斥这种失礼行为并带走士兵。"
+  },
+  {
+    "scene_id": 18,
+    "video_file": "scene_18.mp4",
+    "start_time": "06:16.0",
+    "end_time": "07:02.0",
+    "simple_description": "会面甄姬",
+    "detailed_description": "帐内甄姬与白晓对话。甄姬提及洛阳旧事，白晓面临对话抉择。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {"text": "反客为主", "leads_to": 19},
+      {"text": "你嫁人了吗？", "leads_to": 19}
+    ],
+    "selected_option": "你嫁人了吗？"
+  },
+  {
+    "scene_id": 19,
+    "video_file": "scene_19.mp4",
+    "start_time": "07:02.0",
+    "end_time": "08:01.0",
+    "simple_description": "甄姬求助",
+    "detailed_description": "甄姬讲述丈夫逃跑、自己被曹操掳走的惨状，希望白晓能救她。此时曹操突然带人闯入。"
+  },
+  {
+    "scene_id": 20,
+    "video_file": "scene_20.mp4",
+    "start_time": "08:01.0",
+    "end_time": "08:31.0",
+    "simple_description": "应对曹操",
+    "detailed_description": "曹操质问白晓为何在帐中。白晓需做出反应。",
+    "is_interactive": true,
+    "interaction_type": "item_use",
+    "options": [
+      {"text": "不理曹操", "leads_to": 21},
+      {"text": "刘备的草鞋", "leads_to": 21},
+      {"text": "生死看淡", "leads_to": 21}
+    ],
+    "selected_option": "刘备的草鞋"
+  },
+  {
+    "scene_id": 21,
+    "video_file": "scene_21.mp4",
+    "start_time": "08:31.0",
+    "end_time": "08:48.0",
+    "simple_description": "曹操释疑",
+    "detailed_description": "白晓递上草鞋，解释是为刘备投奔打前阵。曹操虽然不悦，但决定先将其安置并邀其共饮。"
+  },
+  {
+    "scene_id": 22,
+    "video_file": "scene_22.mp4",
+    "start_time": "08:48.0",
+    "end_time": "09:07.0",
+    "simple_description": "酒宴入席",
+    "detailed_description": "曹操在主座设宴，席间气氛凝重。白晓需入席就座。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [{"text": "入席", "leads_to": 23}],
+    "selected_option": "入席"
+  },
+  {
+    "scene_id": 23,
+    "video_file": "scene_23.mp4",
+    "start_time": "09:07.0",
+    "end_time": "09:28.0",
+    "simple_description": "煮酒论英雄",
+    "detailed_description": "主角大赞曹公乃未来明君，曹操自称汉臣并指责主角言辞大逆不道。"
+  },
+  {
+    "scene_id": 24,
+    "video_file": "scene_24.mp4",
+    "start_time": "09:28.0",
+    "end_time": "10:04.0",
+    "simple_description": "论英雄交互",
+    "detailed_description": "面对曹操的逼问，白晓需要回应。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {"text": "顺着说", "leads_to": 25},
+      {"text": "继续拍", "leads_to": 25}
+    ],
+    "selected_option": "顺着说"
+  },
+  {
+    "scene_id": 25,
+    "video_file": "scene_25.mp4",
+    "start_time": "10:04.0",
+    "end_time": "10:48.0",
+    "simple_description": "曹操病发",
+    "detailed_description": "曹操突然头风发作倒地。荀彧求主角去监牢劝说被抓的医女。玩家面临礼物选择。",
+    "is_interactive": true,
+    "interaction_type": "item_selection",
+    "options": [
+      {"item": "携带水和食物", "leads_to": 26},
+      {"item": "携带汉美人图册", "leads_to": 26}
+    ],
+    "selected_option": "携带汉美人图册"
+  },
+  {
+    "scene_id": 26,
+    "video_file": "scene_26.mp4",
+    "start_time": "10:48.0",
+    "end_time": "11:30.0",
+    "simple_description": "牢房初遇",
+    "detailed_description": "白晓在牢中见到医女，尝试用现代流行语测试。面对选项。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {"text": "宫廷玉液酒", "leads_to": 27},
+      {"text": "奇变偶不变", "leads_to": 27}
+    ],
+    "selected_option": "宫廷玉液酒"
+  },
+  {
+    "scene_id": 27,
+    "video_file": "scene_27.mp4",
+    "start_time": "11:30.0",
+    "end_time": "12:13.0",
+    "simple_description": "医女赠礼交互",
+    "detailed_description": "医女感叹物是人非，白晓赠送汉美人图册以求缓和气氛。",
+    "is_interactive": true,
+    "interaction_type": "item_use",
+    "options": [{"text": "汉美人图册", "leads_to": 28}],
+    "selected_option": "汉美人图册"
+  },
+  {
+    "scene_id": 28,
+    "video_file": "scene_28.mp4",
+    "start_time": "12:13.0",
+    "end_time": "13:12.0",
+    "simple_description": "小乔身份暴走",
+    "detailed_description": "医女发现画册中有她的画像，其身份实为小乔。她十分愤慨并面临白晓的询问。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {"text": "问她名字", "leads_to": 29},
+      {"text": "给她擦脸", "leads_to": 29}
+    ],
+    "selected_option": "给你擦脸"
+  },
+  {
+    "scene_id": 29,
+    "video_file": "scene_29.mp4",
+    "start_time": "13:12.0",
+    "end_time": "14:10.0",
+    "simple_description": "承诺相救",
+    "detailed_description": "小乔卸下伪装请求白晓带她走。荀彧再次前来。白晓在被带离前给予安抚。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [{"text": "安抚小乔", "leads_to": 30}],
+    "selected_option": "安抚小乔"
+  }
+]

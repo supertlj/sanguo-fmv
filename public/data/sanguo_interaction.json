@@ -1,0 +1,550 @@
+[
+  {
+    "scene_id": 1,
+    "start_time": "00:00.0",
+    "end_time": "00:18.5",
+    "simple_description": "开场对话",
+    "detailed_description": "子涵在床上玩手机，白晓过来询问。两人讨论《代号三国：龙起》游戏，白晓帮子涵抽卡。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 2,
+    "start_time": "00:18.5",
+    "end_time": "00:45.3",
+    "simple_description": "穿越前奏",
+    "detailed_description": "白晓抽中同名角色“刘小山”金卡。屏幕发出白光，展现三国全景图及开场诗词。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 3,
+    "start_time": "00:45.3",
+    "end_time": "01:08.5",
+    "simple_description": "桃园结义交互",
+    "detailed_description": "主角穿越到桃园，刘关张三人正在结拜。刘备递给白晓一把短刀要求加入结拜。",
+    "is_interactive": true,
+    "interaction_type": "qte",
+    "interaction_config": {
+      "duration": 4,
+      "layout": "full_screen",
+      "qte_text": "点击屏幕任意位置进行结拜"
+    },
+    "options": [
+      {
+        "text": "割手指结拜",
+        "leads_to": 4
+      }
+    ]
+  },
+  {
+    "scene_id": 4,
+    "start_time": "01:08.5",
+    "end_time": "01:50.0",
+    "simple_description": "结拜剧情",
+    "detailed_description": "主角完成割指礼，四人共同宣誓结为兄弟。随后镜头转到桌面上的随身物品。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 5,
+    "start_time": "01:50.0",
+    "end_time": "01:55.0",
+    "simple_description": "物品选择交互主场",
+    "detailed_description": "桌上有四件物品供选择，分别触发不同回忆，结束后回到原场。",
+    "is_interactive": true,
+    "interaction_type": "hotspots",
+    "interaction_config": {
+      "layout": "hotspots",
+      "filter_collected": true,
+      "all_collected_leads_to": 11,
+      "hint_text": "请选择一件物品查看回忆"
+    },
+    "options": [
+      {
+        "item": "zhuge_crossbow",
+        "leads_to": 6,
+        "points": [[41.29,7.47],[52.42,15.87],[56.69,20.54],[57.48,22.52],[59.44,22.99],[63.34,23.8],[64.86,24.85],[65.51,26.49],[66.67,28.12],[67.46,29.64],[67.1,31.86],[66.38,34.07],[64.93,35.59],[63.56,36.99],[62.04,36.99],[60.16,37.22],[57.41,37.34],[55.53,36.87],[54.81,45.51],[38.11,49.71],[31.24,48.19],[27.77,38.62],[25.81,39.56],[23.5,38.27],[23.28,32.79],[21.4,30.57],[16.12,28.7],[15.76,25.55],[22.99,25.32],[22.85,21.59],[23.86,19.25],[25.45,19.49],[26.9,21.12],[27.48,23.57],[27.62,25.44],[28.63,25.44],[29.5,24.62],[29.65,21.82],[29.65,21.82],[29.86,19.02],[31.6,17.04],[32.54,15.64],[33.04,14.24],[32.32,12.14],[32.32,10.27],[34.2,8.75],[34.85,9.57],[35.79,8.28],[36.95,7.12],[38.47,7.12],[40.06,7.12],[41.14,7.47]]
+      },
+      {
+        "item": "yun_shi_one",
+        "leads_to": 7,
+        "points": [[22.63,60.91],[28.99,60.09],[30.37,58.23],[30.66,56.24],[32.1,55.08],[33.04,56.13],[33.84,57.29],[33.91,57.88],[37.96,57.18],[38.11,59.98],[37.67,62.31],[37.02,64.64],[36.3,66.74],[35.14,68.49],[34.27,68.73],[33.91,69.54],[34.78,70.71],[35.94,72.7],[36.23,75.61],[36.8,78.41],[37.17,82.96],[36.8,87.51],[36.37,92.42],[35.43,94.98],[30.59,91.25],[28.49,89.61],[25.6,90.43],[23.57,89.15],[23.5,86.7],[25.52,86.58],[28.34,84.6],[31.09,82.38],[32.03,78.65],[32.54,74.68],[31.67,71.06],[30.22,70.48],[27.48,70.36],[25.74,68.26],[23.79,64.41],[22.7,61.03]]
+      },
+      {
+        "item": "wang_yun_hufu",
+        "leads_to": 8,
+        "points": [[39.26,59.51],[43.38,59.98],[46.57,58.69],[49.6,59.51],[51.34,57.64],[53.15,55.19],[55.17,53.91],[57.05,55.19],[59,57.53],[60.23,59.28],[61.82,57.64],[62.98,59.28],[63.2,61.49],[63.49,66.16],[63.77,71.88],[63.99,74.33],[62.11,75.85],[61.46,75.5],[59,78.06],[57.85,80.16],[59.07,80.51],[60.45,81.21],[60.23,82.96],[59.65,84.01],[57.56,84.6],[56.4,83.9],[55.53,82.15],[55.24,81.21],[53.51,82.96],[51.05,83.78],[50.54,83.66],[48.73,83.66],[48.88,84.83],[48.88,86],[48.45,86.93],[45.48,87.16],[44.32,85.76],[43.82,84.6],[43.75,83.66],[43.31,85.06],[41.87,87.05],[41.43,88.68],[39.26,89.5],[38.39,88.1],[38.11,86.7],[38.32,84.6],[38.03,65.23],[38.39,64.29],[39.41,63.71],[39.19,62.89],[39.26,59.39]]
+      },
+      {
+        "item": "hong_wei_token",
+        "leads_to": 9,
+        "points": [[65.87,46.32],[66.88,46.67],[67.9,47.37],[68.47,47.37],[68.84,46.21],[69.56,47.02],[69.99,47.84],[69.99,49.12],[69.99,49.71],[69.99,50.88],[70.79,51.46],[70.93,51.69],[71.08,52.98],[71.01,53.44],[71.66,55.08],[71.73,55.43],[71.73,56.94],[71.58,57.76],[71.22,58.34],[71.29,59.39],[71.29,60.56],[71.66,61.03],[71.87,61.96],[72.02,63.59],[72.23,65.11],[72.02,65.46],[71.44,66.51],[71.44,66.98],[70.72,66.39],[70.43,66.16],[69.99,65.69],[69.7,65.69],[69.49,66.04],[69.27,66.98],[69.2,67.68],[68.11,68.03],[68.19,67.68],[67.75,67.09],[67.1,66.74],[66.23,65.46],[66.09,64.06],[65.51,62.89],[65.29,62.89],[64.86,61.84],[64.86,61.61],[63.77,61.96],[63.63,60.44],[63.12,59.04],[62.98,57.88],[62.69,56.83],[62.55,56.59],[62.04,55.08],[62.11,54.49],[62.11,53.68],[61.82,52.98],[61.68,52.51],[61.68,51.23],[61.89,50.53],[62.76,49.12],[63.27,48.19],[63.92,47.26],[64.28,46.44],[64.71,46.21],[65.51,46.09],[66.02,46.32]]
+      }
+    ]
+  },
+  {
+    "scene_id": 6,
+    "start_time": "01:55.0",
+    "end_time": "02:19.0",
+    "simple_description": "回忆：诸葛连弩",
+    "detailed_description": "展示武器诸葛连弩，主角向关羽张飞提及诸葛亮，但此时刘备尚未三顾茅庐，众人并不认识。随后进入后续剧情。结束后回到场景5。",
+    "is_interactive": false,
+    "return_to_id": 5
+  },
+  {
+    "scene_id": 7,
+    "start_time": "02:22.0",
+    "end_time": "02:45.0",
+    "simple_description": "回忆：运石一",
+    "detailed_description": "触摸运石一，白晓脑海中浮现出战火纷飞的场景以及一位白衣女子告别的残影。结束后回到场景5。",
+    "is_interactive": false,
+    "return_to_id": 5
+  },
+  {
+    "scene_id": 8,
+    "start_time": "02:46.5",
+    "end_time": "02:56.0",
+    "simple_description": "回忆：王允的虎符",
+    "detailed_description": "查看王允的虎符，感慨原主身份不仅是小将。结束后回到场景5。",
+    "is_interactive": false,
+    "return_to_id": 5
+  },
+  {
+    "scene_id": 9,
+    "start_time": "02:56.0",
+    "end_time": "03:44.1",
+    "simple_description": "回忆：弘威将军令",
+    "detailed_description": "查看弘威将军令，张飞和关羽讨论主角被朝廷封为弘威将军。视频最后包含了收起物品的动作。结束后回到场景5。",
+    "is_interactive": false,
+    "return_to_id": 5
+  },
+  {
+    "scene_id": 11,
+    "start_time": "03:44.1",
+    "end_time": "04:29.0",
+    "simple_description": "临别赠礼",
+    "detailed_description": "白晓决定出发。刘备赠送亲手编织的草鞋作为礼物。三兄弟依依惜别。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 12,
+    "start_time": "04:29.0",
+    "end_time": "04:32.0",
+    "video_file": "scene_12_choice.dat",
+    "simple_description": "地图移动选择",
+    "detailed_description": "游戏地图展示，玩家需要选择目的地。",
+    "is_interactive": true,
+    "interaction_type": "hotspots",
+    "interaction_config": {
+      "layout": "hotspots",
+      "hint_text": "请在地图上选择目的地"
+    },
+    "options": [
+      {
+        "text": "前往曹操军营",
+        "leads_to": "12_move",
+        "points": [[46.35,16.22],[49.02,16.45],[49.02,28.24],[46.2,28.12],[46.35,16.1]]
+      }
+    ]
+  },
+  {
+    "scene_id": "12_move",
+    "start_time": "04:32.0",
+    "end_time": "04:35.0",
+    "video_file": "scene_12_move.dat",
+    "simple_description": "地图移动动画",
+    "detailed_description": "角色标志从刘备领地移动至曹操军营。",
+    "is_interactive": false,
+    "leads_to": 13
+  },
+  {
+    "scene_id": 13,
+    "start_time": "04:35.0",
+    "end_time": "04:54.0",
+    "simple_description": "抵达曹营",
+    "detailed_description": "白晓来到曹营门口，荀彧出现阻拦并询问身份。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 14,
+    "start_time": "04:54.0",
+    "end_time": "04:56.0",
+    "video_file": "scene_14_head.dat",
+    "simple_description": "荀彧身份校验",
+    "detailed_description": "白晓来到营前。荀彧要求出示令牌。",
+    "is_interactive": true,
+    "interaction_type": "hotspots",
+    "interaction_config": {
+      "layout": "hotspots",
+      "hint_text": "请在场景中寻找交互点"
+    },
+    "options": [
+      {
+        "text": "出示弘威将军令",
+        "leads_to": 15,
+        "effect": "zoom",
+        "points": [[0.07,85.18],[32.03,85.06],[32.1,91.02],[0.14,90.78],[0.07,85.3]]
+      },
+      {
+        "text": "出示诸葛连弩",
+        "leads_to": 13,
+        "effect": "zoom",
+        "points": [[37.38,85.41],[68.33,85.76],[68.47,90.9],[37.09,91.13],[37.02,85.65]]
+      },
+      {
+        "text": "出示运石一",
+        "leads_to": 13,
+        "effect": "zoom",
+        "points": [[69.34,85.53],[98.55,85.88],[98.76,91.02],[69.63,90.9],[69.29,85.88]]
+      }
+    ]
+  },
+  {
+    "scene_id": 15,
+    "start_time": "04:56.0",
+    "end_time": "05:17.0",
+    "video_file": "scene_15_final.dat",
+    "simple_description": "进入内营",
+    "detailed_description": "出示令牌后，荀彧放行。他在带路途中交谈，随后去通报。白晓注意到一顶神秘帐篷。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [
+      {
+        "text": "点击帐篷查看",
+        "leads_to": 16
+      }
+    ],
+    "selected_option": "点击帐篷查看"
+  },
+  {
+    "scene_id": 16,
+    "start_time": "05:17.0",
+    "end_time": "05:40.0",
+    "simple_description": "偷窥士兵交互",
+    "detailed_description": "三名士兵正在帐外偷看，声称里面有仙女洗澡。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [
+      {
+        "text": "加入他们",
+        "leads_to": 17
+      },
+      {
+        "text": "劝退他们",
+        "leads_to": 17
+      }
+    ],
+    "selected_option": "加入他们"
+  },
+  {
+    "scene_id": 17,
+    "start_time": "05:40.0",
+    "end_time": "06:16.0",
+    "simple_description": "甄姬沐浴",
+    "detailed_description": "白晓戳破窗纸看到甄姬沐浴。随后荀彧赶到，呵斥这种失礼行为并带走士兵。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 18,
+    "start_time": "06:16.0",
+    "end_time": "07:02.0",
+    "simple_description": "会面甄姬",
+    "detailed_description": "帐内甄姬与白晓对话。甄姬提及洛阳旧事，白晓面临对话抉择。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {
+        "text": "反客为主",
+        "leads_to": 19
+      },
+      {
+        "text": "你嫁人了吗？",
+        "leads_to": 19
+      }
+    ],
+    "selected_option": "你嫁人了吗？"
+  },
+  {
+    "scene_id": 19,
+    "start_time": "07:02.0",
+    "end_time": "08:01.0",
+    "simple_description": "甄姬求助",
+    "detailed_description": "甄姬讲述丈夫逃跑、自己被曹操掳走的惨状，希望白晓能救她。此时曹操突然带人闯入。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 20,
+    "start_time": "08:01.0",
+    "end_time": "08:31.0",
+    "simple_description": "应对曹操",
+    "detailed_description": "曹操质问白晓为何在帐中。白晓需做出反应。",
+    "is_interactive": true,
+    "interaction_type": "item_use",
+    "options": [
+      {
+        "text": "不理曹操",
+        "leads_to": 21
+      },
+      {
+        "text": "刘备的草鞋",
+        "leads_to": 21
+      },
+      {
+        "text": "生死看淡",
+        "leads_to": 21
+      }
+    ],
+    "selected_option": "刘备的草鞋"
+  },
+  {
+    "scene_id": 21,
+    "start_time": "08:31.0",
+    "end_time": "08:48.0",
+    "simple_description": "曹操释疑",
+    "detailed_description": "白晓递上草鞋，解释是为刘备投奔打前阵。曹操虽然不悦，但决定先将其安置并邀其共饮。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 22,
+    "start_time": "08:48.0",
+    "end_time": "09:07.0",
+    "simple_description": "酒宴入席",
+    "detailed_description": "曹操在主座设宴，席间气氛凝重。白晓需入席就座。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [
+      {
+        "text": "入席",
+        "leads_to": 23
+      }
+    ],
+    "selected_option": "入席"
+  },
+  {
+    "scene_id": 23,
+    "start_time": "09:07.0",
+    "end_time": "09:28.0",
+    "simple_description": "煮酒论英雄",
+    "detailed_description": "主角大赞曹公乃未来明君，曹操自称汉臣并指责主角言辞大逆不道。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 24,
+    "start_time": "09:28.0",
+    "end_time": "10:04.0",
+    "simple_description": "论英雄交互",
+    "detailed_description": "面对曹操的逼问，白晓需要回应。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {
+        "text": "顺着说",
+        "leads_to": 25
+      },
+      {
+        "text": "继续拍",
+        "leads_to": 25
+      }
+    ],
+    "selected_option": "顺着说"
+  },
+  {
+    "scene_id": 25,
+    "start_time": "10:04.0",
+    "end_time": "10:48.0",
+    "simple_description": "曹操病发",
+    "detailed_description": "曹操突然头风发作倒地。荀彧求主角去监牢劝说被抓的医女。玩家面临礼物选择。",
+    "is_interactive": true,
+    "interaction_type": "item_selection",
+    "options": [
+      {
+        "item": "携带水和食物",
+        "leads_to": 26
+      },
+      {
+        "item": "携带汉美人图册",
+        "leads_to": 26
+      }
+    ],
+    "selected_option": "携带汉美人图册"
+  },
+  {
+    "scene_id": 26,
+    "start_time": "10:48.0",
+    "end_time": "11:30.0",
+    "simple_description": "牢房初遇",
+    "detailed_description": "白晓在牢中见到医女，尝试用现代流行语测试。面对选项。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {
+        "text": "宫廷玉液酒",
+        "leads_to": 27
+      },
+      {
+        "text": "奇变偶不变",
+        "leads_to": 27
+      }
+    ],
+    "selected_option": "宫廷玉液酒"
+  },
+  {
+    "scene_id": 27,
+    "start_time": "11:30.0",
+    "end_time": "12:13.0",
+    "simple_description": "医女赠礼交互",
+    "detailed_description": "医女感叹物是人非，白晓赠送汉美人图册以求缓和气氛。",
+    "is_interactive": true,
+    "interaction_type": "item_use",
+    "options": [
+      {
+        "text": "汉美人图册",
+        "leads_to": 28
+      }
+    ],
+    "selected_option": "汉美人图册"
+  },
+  {
+    "scene_id": 28,
+    "start_time": "12:13.0",
+    "end_time": "13:12.0",
+    "simple_description": "小乔身份暴走",
+    "detailed_description": "医女发现画册中有她的画像，其身份实为小乔。她十分愤慨并面临白晓的询问。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {
+        "text": "问她名字",
+        "leads_to": 29
+      },
+      {
+        "text": "给她擦脸",
+        "leads_to": 29
+      }
+    ],
+    "selected_option": "给你擦脸"
+  },
+  {
+    "scene_id": 29,
+    "start_time": "13:12.0",
+    "end_time": "14:10.0",
+    "simple_description": "承诺相救",
+    "detailed_description": "小乔卸下伪装请求白晓带她走。荀彧再次前来。白晓在被带离前给予安抚。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [
+      {
+        "text": "安抚小乔",
+        "leads_to": 30
+      }
+    ],
+    "selected_option": "安抚小乔"
+  },
+  {
+    "scene_id": 30,
+    "start_time": "14:10.0",
+    "end_time": "14:48.0",
+    "simple_description": "集市寻药",
+    "detailed_description": "白晓为增加好感度决定去市集弄点止咳药。路遇买卖人口场景。",
+    "is_interactive": false
+  },
+  {
+    "scene_id": 31,
+    "start_time": "14:48.0",
+    "end_time": "15:57.0",
+    "simple_description": "邹氏求助",
+    "detailed_description": "女子邹氏在市集被欺负，请求主角买下她。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {
+        "text": "买下她",
+        "leads_to": 32
+      },
+      {
+        "text": "不买她",
+        "leads_to": 32
+      }
+    ],
+    "selected_option": "买下她"
+  },
+  {
+    "scene_id": 32,
+    "start_time": "15:57.0",
+    "end_time": "16:50.0",
+    "simple_description": "赠送草药剧情",
+    "detailed_description": "救下邹氏后，主角从路人处获取止咳草药，需送回牢房。",
+    "is_interactive": true,
+    "interaction_type": "item_use",
+    "options": [
+      {
+        "text": "止咳的草",
+        "leads_to": 33
+      }
+    ],
+    "selected_option": "止咳的草"
+  },
+  {
+    "scene_id": 33,
+    "start_time": "16:50.0",
+    "end_time": "17:59.0",
+    "simple_description": "死士危机",
+    "detailed_description": "回到牢房区域，发现另一黑衣医女灰奴正被威胁。白晓上前解围。",
+    "is_interactive": true,
+    "interaction_type": "click_to_advance",
+    "options": [
+      {
+        "text": "揭下面具",
+        "leads_to": 34
+      }
+    ],
+    "selected_option": "揭下面具"
+  },
+  {
+    "scene_id": 34,
+    "start_time": "17:59.0",
+    "end_time": "18:25.0",
+    "simple_description": "灰奴自叙",
+    "detailed_description": "灰奴坦白是王允死士。她伤势过重。白晓面临选择。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {
+        "text": "强行止血",
+        "leads_to": 35
+      },
+      {
+        "text": "随便她",
+        "leads_to": 35
+      }
+    ],
+    "selected_option": "强行止血"
+  },
+  {
+    "scene_id": 35,
+    "start_time": "18:25.0",
+    "end_time": "19:11.0",
+    "simple_description": "终极抉择",
+    "detailed_description": "荀彧再次施压要求救曹操，白晓最终决定优先救治自己的死士。",
+    "is_interactive": true,
+    "interaction_type": "dialogue_choice",
+    "options": [
+      {
+        "text": "给曹操治病",
+        "leads_to": "result_scene"
+      },
+      {
+        "text": "给我的死士治病",
+        "leads_to": "result_scene"
+      }
+    ],
+    "selected_option": "给我的死士治病"
+  },
+  {
+    "scene_id": "result_scene",
+    "start_time": "19:11.0",
+    "end_time": "20:00.0",
+    "simple_description": "达成结局：灾年难为善",
+    "detailed_description": "白晓守信救治灰奴，获得小乔与灰奴的忠诚。蔡文姬回忆婚后幸福时光，画面最终定格在牢房中的回忆画卷。显示结局标题。",
+    "is_interactive": false,
+    "connected_to_scene_id": 35
+  }
+]
