@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-interface Option {
+export interface Option {
   text?: string;
   item?: string;
   leads_to: number | string;
@@ -16,7 +16,7 @@ interface Option {
   scale?: number;
 }
 
-interface Item {
+export interface Item {
   id: string;
   name: string;
   description: string;
@@ -24,7 +24,7 @@ interface Item {
   category: string;
 }
 
-interface InteractionConfig {
+export interface InteractionConfig {
   duration?: number;       // For QTEs
   layout?: 'full_screen' | 'standard' | 'hotspots';
   filter_collected?: boolean;
@@ -33,7 +33,7 @@ interface InteractionConfig {
   qte_text?: string;
 }
 
-interface Scene {
+export interface Scene {
   scene_id: number | string;
   video_file: string;
   start_time: string;

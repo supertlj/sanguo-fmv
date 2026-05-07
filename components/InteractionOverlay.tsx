@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useGame } from '../context/GameContext';
+import { useGame, Option } from '../context/GameContext';
 
 interface InteractionOverlayProps {
   videoProgress: { current: number; duration: number };
@@ -10,7 +10,7 @@ interface InteractionOverlayProps {
 export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoProgress }) => {
   const { state, currentScene, setCurrentScene, addToInventory, updateAffection, getItemById } = useGame();
   const [notification, setNotification] = useState<{ text: string; color: string } | null>(null);
-  const [hoveredOption, setHoveredOption] = useState<any>(null);
+  const [hoveredOption, setHoveredOption] = useState<Option | null>(null);
 
   if (!currentScene || !currentScene.is_interactive) return null;
 
@@ -102,7 +102,7 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
               <div 
                 className="magnifier-lens"
                 style={{
-                  clipPath: `polygon(${hoveredOption.points.map((p: any) => `${p[0]}% ${p[1]}%`).join(', ')})`,
+                  clipPath: `polygon(${hoveredOption.points.map((p: [number, number]) => `${p[0]}% ${p[1]}%`).join(', ')})`,
                   '--zoom-scale': hoveredOption.scale || 1.02
                 } as React.CSSProperties & { [key: string]: any }}
               >
