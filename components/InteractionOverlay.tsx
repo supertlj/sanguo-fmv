@@ -98,7 +98,7 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
             {config.hint_text && <div className="hotspot-hint">{config.hint_text}</div>}
             
             {/* 1. Magnifier Layer (Zoom Effect) */}
-            {hoveredOption?.effect === 'zoom' && (
+            {hoveredOption?.effect === 'zoom' && hoveredOption?.points && (
               <div 
                 className="magnifier-lens"
                 style={{
@@ -113,8 +113,8 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
                     height: '100%',
                     objectFit: 'cover',
                     transform: `scale(var(--zoom-scale, 1.02))`,
-                    transformOrigin: `${hoveredOption.points[0][0]}% ${hoveredOption.points[0][1]}%`
-                  }}
+                    transformOrigin: hoveredOption.points[0] ? `${hoveredOption.points[0][0]}% ${hoveredOption.points[0][1]}%` : 'center'
+                  } as React.CSSProperties}
                   autoPlay
                   muted
                   loop
