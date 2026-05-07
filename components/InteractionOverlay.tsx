@@ -95,7 +95,7 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
         {/* Hotspot Layer (Polygonal) */}
         {type === 'hotspots' && (
           <div className="hotspot-layer">
-            {config.hint_text && <div className="hotspot-hint">{config.hint_text}</div>}
+            {config && config.hint_text && <div className="hotspot-hint">{config.hint_text}</div>}
             
             {/* 1. Magnifier Layer (Zoom Effect) */}
             {hoveredOption?.effect === 'zoom' && hoveredOption?.points && (
@@ -235,7 +235,7 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
               top: `${hoveredOption.points?.[0][1]}%` 
             }}
           >
-            {getItemById(hoveredOption.item)?.name || hoveredOption.item || hoveredOption.text}
+            {(hoveredOption.item ? getItemById(hoveredOption.item)?.name : null) || hoveredOption.item || hoveredOption.text}
           </div>
         )}
       </div>
