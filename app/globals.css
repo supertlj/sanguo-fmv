@@ -28,3 +28,26 @@ a {
 button {
   font-family: inherit;
 }
+
+/* Mobile Landscape Lock: Rotate main container 90deg if in portrait */
+@media screen and (orientation: portrait) and (max-width: 1024px) {
+  main {
+    width: 100vh !important;
+    height: 100vw !important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center center;
+    overflow: hidden;
+  }
+}
+
+/* Ensure no bounce on mobile */
+html, body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+}
