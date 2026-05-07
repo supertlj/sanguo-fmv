@@ -32,13 +32,27 @@ button {
 /* Mobile Landscape Lock: Rotate main container 90deg if in portrait */
 @media screen and (orientation: portrait) and (max-width: 1024px) {
   main {
-    width: 100vh !important;
-    height: 100vw !important;
+    width: 100dvh !important;
+    height: 100dvw !important;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
     transform-origin: center center;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Force 16:9 aspect inside the rotated main on narrow phones */
+  main > .game-content-container {
+    width: 100%;
+    height: 100%;
+    max-width: calc(100dvh * 16 / 9);
+    max-height: calc(100dvw);
+    aspect-ratio: 16 / 9;
+    position: relative;
     overflow: hidden;
   }
 }
@@ -50,4 +64,5 @@ html, body {
   height: 100%;
   overflow: hidden;
   touch-action: none;
+  background: #000;
 }

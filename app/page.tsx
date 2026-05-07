@@ -146,31 +146,33 @@ export default function Home() {
   }
 
   return (
-    <main style={{ position: 'relative', width: '100vw', height: '100vh' }}>
-      <VideoEngine onVideoEnd={handleVideoEnd} onTimeUpdate={handleVideoTimeUpdate} />
-      <InteractionOverlay videoProgress={videoProgress} />
-      
-      {/* Editor Tool - Hidden by default, toggled via Shift+E */}
-      <HotspotEditor onExport={(points) => {
-        console.log('Main Page received points:', points);
-      }} />
-      
-      {/* Game Menu Buttons */}
-      <div className="game-menu">
-        <button className="menu-btn" onClick={() => setShowFlowchart(true)}>
-          剧情线图
-        </button>
-        <button className="menu-btn" onClick={() => setShowMenu(true)}>
-          系统菜单
-        </button>
-      </div>
+    <main style={{ position: 'relative', width: '100vw', height: '100vh', background: '#000' }}>
+      <div className="game-content-container" style={{ position: 'relative', width: '100%', height: '100%' }}>
+        <VideoEngine onVideoEnd={handleVideoEnd} onTimeUpdate={handleVideoTimeUpdate} />
+        <InteractionOverlay videoProgress={videoProgress} />
+        
+        {/* Editor Tool - Hidden by default, toggled via Shift+E */}
+        <HotspotEditor onExport={(points) => {
+          console.log('Main Page received points:', points);
+        }} />
+        
+        {/* Game Menu Buttons */}
+        <div className="game-menu">
+          <button className="menu-btn" onClick={() => setShowFlowchart(true)}>
+            剧情线图
+          </button>
+          <button className="menu-btn" onClick={() => setShowMenu(true)}>
+            系统菜单
+          </button>
+        </div>
 
-      {showFlowchart && <Flowchart onClose={() => setShowFlowchart(false)} />}
-      {showMenu && <GlobalMenu onClose={() => setShowMenu(false)} />}
+        {showFlowchart && <Flowchart onClose={() => setShowFlowchart(false)} />}
+        {showMenu && <GlobalMenu onClose={() => setShowMenu(false)} />}
 
-      {/* Dev Stats Overlay */}
-      <div className="dev-stats">
-        Scene: {currentScene?.scene_id} | {currentScene?.simple_description}
+        {/* Dev Stats Overlay */}
+        <div className="dev-stats">
+          Scene: {currentScene?.scene_id} | {currentScene?.simple_description}
+        </div>
       </div>
 
       <style jsx>{`
