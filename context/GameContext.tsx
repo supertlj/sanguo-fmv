@@ -11,6 +11,9 @@ interface Option {
   width?: number;  
   height?: number; 
   points?: [number, number][]; // Points for polygonal hotspot [[x,y], [x,y]...]
+  effect?: 'glow' | 'zoom' | 'none';
+  color?: string;
+  scale?: number;
 }
 
 interface Item {

@@ -119,7 +119,7 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
                   muted
                   loop
                   ref={(el) => {
-                    if (el) {
+                    if (el && typeof document !== 'undefined') {
                       const mainVideo = document.querySelector('video.video-layer') as HTMLVideoElement;
                       if (mainVideo) el.currentTime = mainVideo.currentTime;
                     }
@@ -153,10 +153,10 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
                     className={`hotspot-polygon ${hoveredOption === option ? 'active' : ''}`}
                     style={{ 
                       '--glow-color': option.color || '#ffd700',
-                      // If effect is zoom, we hide the glow
+                      '--zoom-scale': option.scale || 1.02,
                       filter: option.effect === 'zoom' ? 'none' : 'url(#hotspotGlow)',
                       opacity: option.effect === 'zoom' ? (hoveredOption === option ? 1 : 0) : 1
-                    } as any}
+                    } as React.CSSProperties}
                     onMouseEnter={() => setHoveredOption(option)}
                     onMouseLeave={() => setHoveredOption(null)}
                     onClick={(e) => {
