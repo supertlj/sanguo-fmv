@@ -5,7 +5,7 @@ import { useGame } from '../context/GameContext';
 
 interface VideoEngineProps {
   onVideoEnd: () => void;
-  onTimeUpdate?: (currentTime: number) => void;
+  onTimeUpdate?: (currentTime: number, duration: number) => void;
 }
 
 export const VideoEngine: React.FC<VideoEngineProps> = ({ onVideoEnd, onTimeUpdate }) => {
