@@ -99,33 +99,41 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
             
             {/* 1. Magnifier Layer (Zoom Effect) */}
             {hoveredOption?.effect === 'zoom' && hoveredOption?.points && (
-              <div 
-                className="magnifier-lens"
-                style={{
-                  clipPath: `polygon(${hoveredOption.points.map((p: [number, number]) => `${p[0]}% ${p[1]}%`).join(', ')})`,
-                  '--zoom-scale': hoveredOption.scale || 1.02
-                } as React.CSSProperties & { [key: string]: any }}
-              >
-                <video 
-                  src={currentScene.video_file ? `/videos/segments/${currentScene.video_file}` : `/videos/segments/scene_${String(currentScene.scene_id).padStart(2, '0')}.dat`}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    transform: `scale(var(--zoom-scale, 1.02))`,
-                    transformOrigin: hoveredOption.points[0] ? `${hoveredOption.points[0][0]}% ${hoveredOption.points[0][1]}%` : 'center'
-                  } as React.CSSProperties}
-                  autoPlay
-                  muted
-                  loop
-                  ref={(el) => {
-                    if (el && typeof document !== 'undefined') {
-                      const mainVideo = document.querySelector('video.video-layer') as HTMLVideoElement;
-                      if (mainVideo) el.currentTime = mainVideo.currentTime;
-                    }
-                  }}
-                />
-              </div>
+              (() => {
+                const points = hoveredOption.points;
+                const scale = hoveredOption.scale || 1.02;
+                const firstPoint = points[0];
+                
+                return (
+                  <div 
+                    className="magnifier-lens"
+                    style={{
+                      clipPath: `polygon(${points.map((p: [number, number]) => `${p[0]}% ${p[1]}%`).join(', ')})`,
+                      '--zoom-scale': scale
+                    } as React.CSSProperties & { [key: string]: any }}
+                  >
+                    <video 
+                      src={currentScene.video_file ? `/videos/segments/${currentScene.video_file}` : `/videos/segments/scene_${String(currentScene.scene_id).padStart(2, '0')}.dat`}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        transform: `scale(var(--zoom-scale, 1.02))`,
+                        transformOrigin: firstPoint ? `${firstPoint[0]}% ${firstPoint[1]}%` : 'center'
+                      } as React.CSSProperties}
+                      autoPlay
+                      muted
+                      loop
+                      ref={(el) => {
+                        if (el && typeof document !== 'undefined') {
+                          const mainVideo = document.querySelector('video.video-layer') as HTMLVideoElement;
+                          if (mainVideo) el.currentTime = mainVideo.currentTime;
+                        }
+                      }}
+                    />
+                  </div>
+                );
+              })()
             )}
 
             <svg className="hotspot-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
