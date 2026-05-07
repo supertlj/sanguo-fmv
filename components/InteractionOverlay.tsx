@@ -104,7 +104,7 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
                 style={{
                   clipPath: `polygon(${hoveredOption.points.map((p: any) => `${p[0]}% ${p[1]}%`).join(', ')})`,
                   '--zoom-scale': hoveredOption.scale || 1.02
-                } as any}
+                } as React.CSSProperties & { [key: string]: any }}
               >
                 <video 
                   src={currentScene.video_file ? `/videos/segments/${currentScene.video_file}` : `/videos/segments/scene_${String(currentScene.scene_id).padStart(2, '0')}.dat`}
@@ -156,7 +156,7 @@ export const InteractionOverlay: React.FC<InteractionOverlayProps> = ({ videoPro
                       '--zoom-scale': option.scale || 1.02,
                       filter: option.effect === 'zoom' ? 'none' : 'url(#hotspotGlow)',
                       opacity: option.effect === 'zoom' ? (hoveredOption === option ? 1 : 0) : 1
-                    } as React.CSSProperties}
+                    } as React.CSSProperties & { [key: string]: any }}
                     onMouseEnter={() => setHoveredOption(option)}
                     onMouseLeave={() => setHoveredOption(null)}
                     onClick={(e) => {
